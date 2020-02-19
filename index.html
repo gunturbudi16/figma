@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="shortcut icon" href="./img/bookshelf.png" type="image/x-icon" />
+    <title>Library</title>
+  </head>
+  <body>
+    <section class="container">
+      <section class="aside">
+        <img src="./img/menu.png" alt="" />
+        <img src="./img/gunturfb.jpg" alt="" class="photo" />
+        <h1>Guntur Budi Kurniawan</h1>
+        <div class="sidemenu">
+          <ul>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Add Book*</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="content">
+        <section class="topnav">
+          <div class="drop">
+            All Categories
+            <i class="fa fa-caret-down"></i>
+            All Time
+            <i class="fa fa-caret-down"></i>
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              placeholder="&#xF002; Search"
+              style="font-family:Arial, FontAwesome"
+            />
+          </div>
+          <div class="logo">
+            <img src="./img/logo12.jpeg" alt="" />
+          </div>
+        </section>
+        <!-- Slider -->
+        <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+          <img src="./img/covernya.png" alt="" class="carousel-cell" />
+          <img src="./img/lembur.png" alt="" class="carousel-cell" />
+          <img src="./img/laskar.png" alt="" class="carousel-cell" />
+          <img src="./img/covernya.png" alt="" class="carousel-cell" />
+          <img src="./img/lembur.png" alt="" class="carousel-cell" />
+          <img src="./img/laskar.png" alt="" class="carousel-cell" />
+          <img src="./img/covernya.png" alt="" class="carousel-cell" />
+          <img src="./img/lembur.png" alt="" class="carousel-cell" />
+        </div>
+
+        <!-- <span id="item-1"></span>
+          <span id="item-2"></span>
+          <span id="item-3"></span>
+          <div class="carousel-item item-1">
+            <h2>Ubur-Ubur Lembur</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
+              Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.
+            </p>
+            <a class="arrow arrow-prev" href="#item-3"></a>
+            <a class="arrow arrow-next" href="#item-2"></a>
+          </div>
+
+          <div class="carousel-item item-2">
+            <h2>Lembur ya</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
+            </p>
+            <a class="arrow arrow-prev" href="#item-1"></a>
+            <a class="arrow arrow-next" href="#item-3"></a>
+          </div>
+
+          <div class="carousel-item item-3">
+            <h2>Napa Emangnya</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
+            </p>
+            <a class="arrow arrow-prev" href="#item-2"></a>
+            <a class="arrow arrow-next" href="#item-1"></a>
+          </div> -->
+
+        <section class="footer-content">
+          <!-- Book Lists -->
+          <div class="content-title">
+            <h2>Book Lists</h2>
+          </div>
+
+          <!-- Content Section -->
+          <section class="content-container">
+            <div class="card-container">
+              <img src="./img/covernya.png" alt="book-cover" />
+              <div class="card-text-container">
+                <h3>Dilan 1990</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  convallis lacus mi, sit amet vehicula nisl consequat id.
+                </p>
+              </div>
+            </div>
+            <div class="card-container">
+              <img src="./img/seni.png" alt="book-cover" />
+              <div class="card-text-container">
+                <h3>Sebuah Seni untuk ...</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  convallis lacus mi, sit amet vehicula nisl consequat id.
+                </p>
+              </div>
+            </div>
+            <div class="card-container">
+              <img src="./img/react.png" alt="book-cover" />
+              <div class="card-text-container">
+                <h3>React Native</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  convallis lacus mi, sit amet vehicula nisl consequat id.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
