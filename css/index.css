@@ -536,6 +536,7 @@ https://flickity.metafizzy.co
 }
 .flickity-button-icon {
   fill: currentColor;
+  margin-top: -130px;
 }
 .flickity-prev-next-button {
   margin-right: 20px;
@@ -652,7 +653,7 @@ button {
 }
 .content2 {
   display: grid;
-  width: 1000px;
+  width: 900px;
   grid-template-rows: 30% 30% 30%;
 }
 .content1 h3 {
