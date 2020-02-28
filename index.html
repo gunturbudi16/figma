@@ -3,146 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/bookshelf.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
-    />
-    <link rel="shortcut icon" href="./img/bookshelf.png" type="image/x-icon" />
-    <title>Library</title>
+
+    <title>Libraries</title>
   </head>
+
   <body>
-    <section class="container">
-      <section class="aside">
-        <img src="./img/menu.png" alt="" />
-        <img src="./img/gunturfb.jpg" alt="" class="photo" />
-        <h1>Guntur Budi Kurniawan</h1>
-        <div class="sidemenu">
+    <!-- Aside Nav -->
+
+    <aside id="mySidebar" class="aside-nav-container">
+      <div class="menu-btn">
+        <i onclick="return closeNav()" class="fas fa-times"></i>
+      </div>
+      <div class="profile-container">
+        <img src="./img/gunturfb.jpg" width="100%" alt="profil.jpg" />
+        <h3>Guntur Budi Kurniawan</h3>
+      </div>
+      <nav class="aside-nav">
+        <ul>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#" id="modalBtn" class="button">Add Book*</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <span class="closeBtn">&times; </span>
+        <h2>Add Data</h2>
+        <div class="wrapper">
+          <div class="content1">
+            <h3>Url Images :</h3>
+            <h3>Title :</h3>
+            <h3>Description :</h3>
+          </div>
+          <div class="content2">
+            <input type="text" placeholder="Url Images..." />
+            <input type="text" placeholder="Title..." />
+            <textarea
+              name=""
+              placeholder="Description..."
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+        <button>Save</button>
+      </div>
+    </div>
+    <!-- main container -->
+    <div class="grid-container" id="main">
+      <!-- Top Nav -->
+      <div class="top-nav-container">
+        <nav class="top-nav">
           <ul>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Add Book*</a></li>
+            <li id="openSidebar">
+              <div class="topnav-btn">
+                <i onclick="return openNav()" class="fas fa-bars"></i>
+              </div>
+            </li>
+            <li>All Categories <i class="fa fa-caret-down"></i></li>
+            <li>All Time <i class="fa fa-caret-down"></i></li>
+            <li>
+              <input
+                style="font-family:Arial, FontAwesome"
+                type="text"
+                placeholder="&#xf002; Search book"
+              />
+            </li>
           </ul>
+
+          <a href="#"
+            ><img class=" logo" src="./img/logo.png" alt="logo.png"
+          /></a>
+        </nav>
+      </div>
+
+      <!-- Carousel Section -->
+
+      <section class="carousel-container">
+        <div
+          class="card-carousel-wrapper js-flickity"
+          data-flickity-options='{ "freeScroll": true, "wrapAround": true }'
+        >
+          <div class="carousel-card">
+            <a href="detail-dilan.html" class="carousel-image-card">
+              <img
+                src="./img/carousel1.png"
+                href="detail-dilan.html"
+                alt="carousel img"
+              />
+            </a>
+            <div class="carousel-text">
+              <h2>Dilan 1990</h2>
+              <p>Pidi Baiq</p>
+            </div>
+          </div>
+
+          <div class="carousel-card">
+            <a class="carousel-image-card">
+              <img src="./img/carousel2.png" alt="carousel img" />
+            </a>
+            <div class="carousel-text">
+              <h2>Ubur-Ubur Lembur</h2>
+              <p>Raditya Dika</p>
+            </div>
+          </div>
+
+          <div class="carousel-card">
+            <a class="carousel-image-card">
+              <img src="./img/carousel3.png" alt="carousel img" />
+            </a>
+            <div class="carousel-text">
+              <h2>Laskar Pelangi</h2>
+              <p>Andrea hirata</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="content">
-        <section class="topnav">
-          <div class="drop">
-            All Categories
-            <i class="fa fa-caret-down"></i>
-            All Time
-            <i class="fa fa-caret-down"></i>
+
+      <!-- Book Lists -->
+      <div class="content-title">
+        <h2>Book Lists</h2>
+      </div>
+
+      <!-- Content Section -->
+      <section class="content-container">
+        <a href="detail-dilan.html" class="card-container">
+          <img src="./img/buku1.png" alt="book-cover" />
+          <div class="card-text-container">
+            <h3>Dilan 1990</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              convallis lacus mi, sit amet vehicula nisl consequat id.
+            </p>
           </div>
-          <div class="search">
-            <input
-              type="text"
-              placeholder="&#xF002; Search"
-              style="font-family:Arial, FontAwesome"
-            />
+        </a>
+        <div class="card-container">
+          <img src="./img/buku2.png" alt="book-cover" />
+          <div class="card-text-container">
+            <h3>Sebuah Seni untuk ...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              convallis lacus mi, sit amet vehicula nisl consequat id.
+            </p>
           </div>
-          <div class="logo">
-            <img src="./img/logo12.jpeg" alt="" />
-          </div>
-        </section>
-        <!-- Slider -->
-        <div class="carousel" data-flickity='{ "lazyLoad": true }'>
-          <img src="./img/covernya.png" alt="" class="carousel-cell" />
-          <img src="./img/lembur.png" alt="" class="carousel-cell" />
-          <img src="./img/laskar.png" alt="" class="carousel-cell" />
-          <img src="./img/covernya.png" alt="" class="carousel-cell" />
-          <img src="./img/lembur.png" alt="" class="carousel-cell" />
-          <img src="./img/laskar.png" alt="" class="carousel-cell" />
-          <img src="./img/covernya.png" alt="" class="carousel-cell" />
-          <img src="./img/lembur.png" alt="" class="carousel-cell" />
         </div>
-
-        <!-- <span id="item-1"></span>
-          <span id="item-2"></span>
-          <span id="item-3"></span>
-          <div class="carousel-item item-1">
-            <h2>Ubur-Ubur Lembur</h2>
+        <div class="card-container">
+          <img src="./img/buku3.png" alt="book-cover" />
+          <div class="card-text-container">
+            <h3>React Native</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
-              Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              convallis lacus mi, sit amet vehicula nisl consequat id.
             </p>
-            <a class="arrow arrow-prev" href="#item-3"></a>
-            <a class="arrow arrow-next" href="#item-2"></a>
           </div>
-
-          <div class="carousel-item item-2">
-            <h2>Lembur ya</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
-            </p>
-            <a class="arrow arrow-prev" href="#item-1"></a>
-            <a class="arrow arrow-next" href="#item-3"></a>
-          </div>
-
-          <div class="carousel-item item-3">
-            <h2>Napa Emangnya</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              accumsan pretium dolor vel convallis. Aliquam erat volutpat.
-            </p>
-            <a class="arrow arrow-prev" href="#item-2"></a>
-            <a class="arrow arrow-next" href="#item-1"></a>
-          </div> -->
-
-        <section class="footer-content">
-          <!-- Book Lists -->
-          <div class="content-title">
-            <h2>Book Lists</h2>
-          </div>
-
-          <!-- Content Section -->
-          <section class="content-container">
-            <div class="card-container">
-              <img src="./img/covernya.png" alt="book-cover" />
-              <div class="card-text-container">
-                <h3>Dilan 1990</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  convallis lacus mi, sit amet vehicula nisl consequat id.
-                </p>
-              </div>
-            </div>
-            <div class="card-container">
-              <img src="./img/seni.png" alt="book-cover" />
-              <div class="card-text-container">
-                <h3>Sebuah Seni untuk ...</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  convallis lacus mi, sit amet vehicula nisl consequat id.
-                </p>
-              </div>
-            </div>
-            <div class="card-container">
-              <img src="./img/react.png" alt="book-cover" />
-              <div class="card-text-container">
-                <h3>React Native</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  convallis lacus mi, sit amet vehicula nisl consequat id.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
+        </div>
       </section>
-    </section>
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+    </div>
+
+    <!-- script -->
+    <script>
+      //get modal element
+      var modal = document.getElementById("simpleModal");
+
+      //get open modal button
+      var modalBtn = document.getElementById("modalBtn");
+
+      // get close button
+      var closeBtn = document.getElementsByClassName("closeBtn")[0];
+
+      //listen for open click
+      modalBtn.addEventListener("click", openModal);
+
+      //listen for close click
+      closeBtn.addEventListener("click", closeModal);
+
+      //function to open modal
+      function openModal() {
+        modal.style.display = "block";
+      }
+
+      //function to close modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
+    </script>
+    <script src="./js/carousel.js"></script>
   </body>
 </html>
